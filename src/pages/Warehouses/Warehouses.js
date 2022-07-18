@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react';
 import axios from 'axios';
+import deleteIcon from '../../assets/icons/delete_outline-24px.svg';
+import editIcon from '../../assets/icons/edit-24px.svg';
+import './Warehouses.scss';
+
 
 const apiUrl = "http://localhost:8080"
 
@@ -26,7 +30,7 @@ class Warehouses extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='warehouse'>
                 <h1>Warehouses</h1>
                 <form>
                     <input placeholder='Search'></input>
@@ -36,15 +40,21 @@ class Warehouses extends React.Component {
                     {this.state.warehouseList.map((warehouseNames)=>{
                         return(
                             <div>
-                                <p>WAREHOUSE</p>
-                                <p>{warehouseNames.name}</p>
-                                <p>ADDRESS</p>
-                                <p>{warehouseNames.address}, {warehouseNames.city}, {warehouseNames.country}</p>
-                                <p>CONTACT NAME</p>
-                                <p>{warehouseNames.contact.name}</p>
-                                <p>CONTACT INFORMATION</p>
-                                <p>{warehouseNames.contact.phone}</p>
-                                <p>{warehouseNames.contact.email}</p>
+                                <div>
+                                    <h2>WAREHOUSE</h2>
+                                    <p>{warehouseNames.name}</p>
+                                    <h2>ADDRESS</h2>
+                                    <p>{warehouseNames.address}, {warehouseNames.city}, {warehouseNames.country}</p>
+                                    <img src={deleteIcon}></img>
+                                </div>
+                                <div>
+                                    <h2>CONTACT NAME</h2>
+                                    <p>{warehouseNames.contact.name}</p>
+                                    <h2>CONTACT INFORMATION</h2>
+                                    <p>{warehouseNames.contact.phone}</p>
+                                    <p>{warehouseNames.contact.email}</p>
+                                    <img src={editIcon}></img>
+                                </div>
                             </div>
                         )
                     })
