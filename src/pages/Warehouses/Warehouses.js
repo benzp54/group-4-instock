@@ -30,24 +30,24 @@ class Warehouses extends React.Component {
 
     render() {
         return (
-            <div className='warehouse'>
-                <h1>Warehouses</h1>
-                <form>
+            <div className='warehouses'>
+                <h1 className='warehouses__title'>Warehouses</h1>
+                <form className='warehouses__form'>
                     <input placeholder='Search'></input>
                     <button>+ Add New Warehouse</button>
                 </form>
                 <div>
                     {this.state.warehouseList.map((warehouseNames)=>{
                         return(
-                            <div>
-                                <div>
+                            <div className='warehouse'>
+                                <div className='warehouse__left'>
                                     <h2>WAREHOUSE</h2>
                                     <p>{warehouseNames.name}</p>
                                     <h2>ADDRESS</h2>
                                     <p>{warehouseNames.address}, {warehouseNames.city}, {warehouseNames.country}</p>
                                     <img src={deleteIcon}></img>
                                 </div>
-                                <div>
+                                <div className='warehouse__left'>
                                     <h2>CONTACT NAME</h2>
                                     <p>{warehouseNames.contact.name}</p>
                                     <h2>CONTACT INFORMATION</h2>
