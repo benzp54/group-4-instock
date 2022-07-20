@@ -1,32 +1,62 @@
+//Element styling
+label {
+    display: block;
+    padding-bottom: 4px;
+}
+
+input {
+    border-radius: 20px;
+    border: 2px solid #BDC5D5;
+    height: 36px;
+    width: 100%;
+    margin-bottom: 2%;
+    padding: 0 16px;
+}
+
+button {
+    border-radius: 20px;
+    border-color: 1px solid #BDC5D5;
+    line-height: 36px;
+    width: 48%;
+}
+
+//Class styling
 .editWarehouse {
-    position: absolute;
     display: flex;
-    justify-content: center;
-    margin: 11.79%, 4.27%, 8.32%, 4.27%;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    box-sizing: border-box;
+    color: #13182C;
+    text-align: left;
     background: #FFFFFF;
     box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
     border-radius: 3px;
+    width: 100vw;
+    padding: 0 4%;
 
-    &__head {
+    &__heading {
+        box-sizing: border-box;
+        border-bottom: 2px solid #BDC5D5;
         width: 100%;
-        height: 36px;
-        margin: 4%;
+        padding: 4%
     }
 
     &__title {
-        font-family: 'Titillium Web';
+        display: inline;
         font-style: normal;
         font-weight: 600;
         font-size: 28px;
-        line-height: 36px
+        line-height: 36px;
+        margin: 0;
+        padding: 2%;
     }
 
     &__content {
-        width: 100%;
+        padding: 0 4%;
     }
 
     &__formTitle {
-        font-family: 'Titillium Web';
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
@@ -36,10 +66,27 @@
 
 .editWarehouseForm {
     display: flex;
-
+    
     &__partOne {
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid #BDC5D5;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 4% 0;
     }
 }
 
+.btn {
+
+    &__cancel {
+    background-color: #FFFFFF;
+    };
+
+    &__save {
+        color: #FFFFFF;
+        background-color: #2E66E5;
+    }
+}
 
