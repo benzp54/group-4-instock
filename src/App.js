@@ -15,10 +15,10 @@ class App extends React.Component {
         <BrowserRouter>
           {/* <Header /> */}
           <Switch>
-            {/* <Route path="/" exact component={Warehouse} />
+            <Route path="/" exact component={Warehouse} />
             <Route path="/warehouse" component={Warehouse} />
             <Route path="/warehouse/add-new-warehouse" component={Warehouse} />
-            <Route path="/warehouse/edit-warehouse" component={Warehouse} /> */}
+            <Route path="/warehouse/edit-warehouse" component={Warehouse} />
             <Route path="/inventory" component={Inventory} />
             <Route path="/inventory/add-inventory" component={Inventory} />
             <Route path="/inventory/edit-inventory" component={Inventory} />

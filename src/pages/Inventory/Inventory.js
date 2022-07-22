@@ -17,7 +17,7 @@ class Inventory extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3000/inventory")
+      .get("http://localhost:8080/inventory")
 
       .then((result) => {
         this.setState({
@@ -46,7 +46,7 @@ class Inventory extends React.Component {
                   <p className="item">{inventoryMain.itemName}</p>
                   <h2 className="category-title">CATEGORY</h2>
                   <p className="category">{inventoryMain.caegory}</p>
-                  <img src={deleteIcon}></img>
+                  <img src={deleteIcon} alt="Delete symbol"></img>
                 </div>
                 <div className="warehouse__right">
                   <h2 className="status-title">STATUS</h2>
@@ -55,7 +55,7 @@ class Inventory extends React.Component {
                   <p quantity>{inventoryMain.quantity}</p>
                   <h2 className="warhouse-title">WAREHOUSE</h2>
                   <p className="warehouse">{inventoryMain.warehouseName}</p>
-                  <img src={editIcon}></img>
+                  <img src={editIcon} alt="Edit symbol"></img>
                 </div>
               </div>
             );
