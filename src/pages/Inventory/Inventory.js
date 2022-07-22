@@ -1,8 +1,8 @@
 import React from "react";
-// import React, { Component } from "react";
-// import ReactDOM from "react";
+import React, { Component } from "react";
+import ReactDOM from "react";
 import axios from "axios";
-// import InventoryItemDetails from "../../components/InventoryItemDetails/InventoryItemDetails";
+import InventoryItemDetails from "../../components/InventoryItemDetails/InventoryItemDetails";
 import deleteIcon from "../../assets/icons/delete_outline-24px.svg";
 import editIcon from "../../assets/icons/edit-24px.svg";
 
