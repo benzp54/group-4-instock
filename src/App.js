@@ -16,7 +16,7 @@ class App extends React.Component {
           {/* <Header /> */}
           <Switch>
             <Route path="/" exact component={Warehouse} />
-            <Route path="/warehouse" component={Warehouse} />
+            <Route path="/warehouse" exact component={Warehouse} />
             <Route path="/warehouse/add-new-warehouse" component={Warehouse} />
             <Route path="/warehouse/edit-warehouse" component={Warehouse} />
             {/* <Route path="/inventory" component={Inventory} />
