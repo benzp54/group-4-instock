@@ -1,1 +1,69 @@
-/*# sourceMappingURL=Warehouses.css.map */
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../../assets/fonts/TitilliumWeb-Regular.woff2") format("woff2"), url("../../assets/fonts/TitilliumWeb-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url("../../assets/fonts/TitilliumWeb-SemiBold.woff2") format("woff2"), url("../../assets/fonts/TitilliumWeb-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+.warehouses {
+  position: absolute;
+  left: 4.27%;
+  right: 4.27%;
+  top: 7.53%;
+  bottom: 5.31%;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+  border-radius: 3px;
+}
+.warehouses__title {
+  position: absolute;
+  width: 150px;
+  height: 36px;
+  left: 40px;
+  top: 168px;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #13182C;
+}
+.warehouses__form--input {
+  box-sizing: border-box;
+  position: absolute;
+  width: 295px;
+  height: 36px;
+  left: 40px;
+  top: 220px;
+  border: 1px solid #BDC5D5;
+  border-radius: 20px;
+}
+.warehouses__form--button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 84px;
+  gap: 10px;
+  position: absolute;
+  width: 295px;
+  height: 36px;
+  left: 40px;
+  top: 272px;
+  background: #2E66E6;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 320px) {
+  .warehouse {
+    display: flex;
+  }
+}/*# sourceMappingURL=Warehouses.css.map */

@@ -1,10 +1,181 @@
+@import '../../styles/partials/fonts';
+@import '../../styles/partials/mixins';
+@import '../../styles/partials/variables';
 
-// .warehouses {
+body {
+    font-family: "Titillium Web";
+}
 
-// }
+.warehouses {
+    background: #FFFFFF;
+              
+        &__title {
+            @include mobileQuery {
+                color: #13182C;
+                font-weight: 600;
+                font-size: 28px;
+                position: absolute;
+                left: 24px;
+                top: 32px;
+                margin: 0;
+            }
+        }
+        &__container {
+            @include tabletQuery{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        &__form {
+            @include mobileQuery{
+                display: block;
+            }
+            @include tabletQuery{
+                display: flex;
+            }
+            &--input {
+                @include mobileQuery {
+                    position: absolute;
+                    left: 24px;
+                    top: 84px;
+                    width: 295px;
+                    height: 36px;
+                    border: 1px solid #BDC5D5;
+                    border-radius: 20px;
+                    align-items: center;
+                    padding: 0;
+                }
+            }
+            
+            &--button {
+                @include mobileQuery{
+                    font-size: 13px;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    padding: 8px 84px;
+                    position: absolute;
+                    width: 295px;
+                    height: 36px;
+                    left: 24px;
+                    top: 136px;
+                    background: $interactiveElements;
+                    border-radius: 20px;
+                    border-color: $interactiveElements;
+                }
+            }
+        }
+}
 
-// .warehouse {
-//     display: flex;
-// }
+.warehouse {
+    @include mobileQuery{
+        display: flex;
+        border-top: 1px $outlinesBorders;
+        align-items: flex-start; 
+        padding-left: 24px;
+        padding-top: 24px;
+        padding-right: 47px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+    }
 
+    &__container{
+        @include tabletQuery{
+            display: flex;
+        }
+    }
+
+    &__left {
+        @include mobileQuery{
+            width: 140px;
+        }
+    }
+
+    &__title {
+        @include mobileQuery{
+            font-size: 11px;
+            font-weight: 600;
+            color: $headersPlaceholdersText;
+            margin: 0;
+            align-items: left; 
+        }
+    }
+
+    &__text {
+        @include mobileQuery{
+            font-size: 13px;
+            font-weight: 400;
+            color: $globalText;
+            padding-top: 4px;
+            margin: 0;
+        }
+    }
+
+    &__image {
+        @include mobileQuery{
+            width: 14px;
+            height: 18px;
+            padding-left: 5px;
+        }
+    }
+
+    &__image--edit {
+        @include mobileQuery{
+            width: 14px;
+            height: 18px;
+            // padding-left: 298px;
+        }
+    }
+    
+}
+
+.warehouse:nth-of-type(n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 196px;
+    }
+}
+.warehouse:nth-of-type(2n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 393px;
+    }
+}
+.warehouse:nth-of-type(3n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 590px;
+    }
+}
+.warehouse:nth-of-type(4n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 787px;
+    }
+}
+.warehouse:nth-of-type(5n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 984px;
+    }
+}
+.warehouse:nth-of-type(6n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 1181px;
+    }
+}
+.warehouse:nth-of-type(7n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 1378px;
+    }
+}
+.warehouse:nth-of-type(8n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 1575px;
+    }
+}
 
