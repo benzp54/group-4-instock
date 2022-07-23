@@ -25,9 +25,19 @@ body {
                 left: 2rem;
                 margin: 0;
             }
+            @include desktopQuery{
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+                margin: 0;
+            }
         }
         &__container {
             @include tabletQuery{
+                display: flex;
+                flex-direction: row;
+            }
+            @include desktopQuery{
                 display: flex;
                 flex-direction: row;
             }
@@ -37,6 +47,9 @@ body {
                 display: block;
             }
             @include tabletQuery{
+                display: flex;
+            }
+            @include desktopQuery{
                 display: flex;
             }
             &--input {
@@ -59,6 +72,14 @@ body {
                     top: 2rem;
                     left: 18.9375rem;
                 }
+                @include desktopQuery{
+                    width: 11.5625rem;
+                    height: 1.9rem;
+                    border-radius: 20px;
+                    position: absolute;
+                    top: 2rem;
+                    left: 32.625rem;
+                }
             }
             
             &--button {
@@ -76,6 +97,7 @@ body {
                     background: $interactiveElements;
                     border-radius: 20px;
                     border-color: $interactiveElements;
+                    color: $pageBG;
                 }
                 @include tabletQuery{
                     width: 11.5625rem;
@@ -86,6 +108,18 @@ body {
                     position: absolute;
                     top: 2rem;
                     left: 31.5rem;
+                    color: $pageBG;
+                }
+                @include desktopQuery{
+                    width: 11.5625rem;
+                    height: 2.375rem;
+                    border-radius: 20px;
+                    background: $interactiveElements;
+                    border-color: $interactiveElements;
+                    position: absolute;
+                    top: 2rem;
+                    left: 50.75rem;
+                    color: $pageBG;
                 }
             }
         }
@@ -102,10 +136,17 @@ body {
         word-wrap: break-word;
         overflow-wrap: break-word;
         text-align: left;
+        border-bottom: 1px solid $pageBG;
     }
     @include tabletQuery{
         display: flex;
         text-align: left;
+        border-bottom: 1px solid $pageBG;
+    }
+    @include desktopQuery{
+        display: flex;
+        text-align: left;
+        border-bottom: 1px solid $pageBG;
     }
 
     &__header {
@@ -119,6 +160,13 @@ body {
             left: 32px;
             font-size: 0.875rem;
         }
+        @include desktopQuery{
+            display: flex;
+            position: absolute;
+            top: 5.875rem;
+            left: 32px;
+            font-size: 0.875rem;
+        }
 
         &--top{
             @include tabletQuery{
@@ -126,11 +174,19 @@ body {
                 width: 8.0625rem;
                 text-align: left;
             }
+            @include desktopQuery{
+                margin: 0;
+                width: 13rem;
+                text-align: left;
+            }
         }
     }
 
     &__container{
         @include tabletQuery{
+            display: flex;
+        }
+        @include desktopQuery{
             display: flex;
         }
     }
@@ -142,10 +198,16 @@ body {
         @include tabletQuery{
             display: flex;
         }
+        @include desktopQuery{
+            display: flex;
+        }
     }
 
     &__right {
         @include tabletQuery{
+            display: flex;
+        }
+        @include desktopQuery{
             display: flex;
         }
     }
@@ -159,6 +221,9 @@ body {
             align-items: left; 
         }
         @include tabletQuery{
+            display: none;
+        }
+        @include desktopQuery{
             display: none;
         }
     }
@@ -175,6 +240,10 @@ body {
             width: 8rem;
             font-size: 0.8125rem;
         }
+        @include desktopQuery{
+            width: 13rem;
+            font-size: 0.8125rem;
+        }
     }
 
     &__image {
@@ -184,6 +253,9 @@ body {
             padding-left: 0.3125rem;
         }
         @include tabletQuery{
+            display: none;
+        }
+        @include desktopQuery{
             display: none;
         }
     }
@@ -199,6 +271,12 @@ body {
             padding-top: 1rem;
             padding-left: 1rem;
         }
+        @include desktopQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
     }
 
     &__image--delete {
@@ -206,6 +284,12 @@ body {
             display: none;
         }
         @include tabletQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-top: 1rem;
+            padding-left: 1.5rem;
+        }
+        @include desktopQuery{
             width: 0.875rem;
             height: 1.125rem;
             padding-top: 1rem;
@@ -225,6 +309,11 @@ body {
         top: 10.0625rem;
         left: 2rem;
     }
+    @include desktopQuery{
+        position: absolute;
+        top: 10.0625rem;
+        left: 2rem;
+    }
 }
 .warehouse:nth-of-type(2n) {
     @include mobileQuery{
@@ -232,6 +321,10 @@ body {
         top: 24.5625rem;
     }
     @include tabletQuery{
+        position: absolute;
+        top: 15.5625rem;
+    }
+    @include desktopQuery{
         position: absolute;
         top: 15.5625rem;
     }
@@ -245,6 +338,10 @@ body {
         position: absolute;
         top: 21.75rem;
     }
+    @include desktopQuery{
+        position: absolute;
+        top: 21.75rem;
+    }
 }
 .warehouse:nth-of-type(4n) {
     @include mobileQuery{
@@ -252,6 +349,10 @@ body {
         top: 49.1875rem;
     }
     @include tabletQuery{
+        position: absolute;
+        top: 27.9375rem;
+    }
+    @include desktopQuery{
         position: absolute;
         top: 27.9375rem;
     }
@@ -265,6 +366,10 @@ body {
         position: absolute;
         top: 34.125rem;
     }
+    @include desktopQuery{
+        position: absolute;
+        top: 34.125rem;
+    }
 }
 .warehouse:nth-of-type(6n) {
     @include mobileQuery{
@@ -272,6 +377,10 @@ body {
         top: 73.8125rem;
     }
     @include tabletQuery{
+        position: absolute;
+        top: 40.3125rem;
+    }
+    @include desktopQuery{
         position: absolute;
         top: 40.3125rem;
     }
@@ -285,6 +394,10 @@ body {
         position: absolute;
         top: 46.5rem;
     }
+    @include desktopQuery{
+        position: absolute;
+        top: 46.5rem;
+    }
 }
 .warehouse:nth-of-type(8n) {
     @include mobileQuery{
@@ -294,6 +407,19 @@ body {
     @include tabletQuery{
         position: absolute;
         top: 52rem;
+    }
+    @include desktopQuery{
+        position: absolute;
+        top: 52rem;
+    }
+}
+
+.action{
+    @include tabletQuery{
+        padding-left: 9rem;
+    }
+    @include desktopQuery{
+        padding-left: 14rem;
     }
 }
 
