@@ -23,6 +23,7 @@ body {
                 position: absolute;
                 top: 2rem;
                 left: 2rem;
+                margin: 0;
             }
         }
         &__container {
@@ -43,12 +44,13 @@ body {
                     position: absolute;
                     left: 1.5rem;
                     top: 5.25rem;
-                    width: 18.4375rem;
+                    width: 16.4375rem;
                     height: 2.25rem;
                     border: 1px solid #BDC5D5;
                     border-radius: 20px;
                     align-items: center;
                     padding: 0;
+                    margin: 0 2rem 0 0;
                 }
                 @include tabletQuery{
                     width: 11.5625rem;
@@ -68,13 +70,14 @@ body {
                     align-items: center;
                     padding: 0.5rem 5.25rem;
                     position: absolute;
-                    width: 18.4375rem;
+                    width: 16.4375rem;
                     height: 2.25rem;
                     left: 1.5rem;
                     top: 8.5rem;
                     background: $interactiveElements;
                     border-radius: 20px;
                     border-color: $interactiveElements;
+                    color: $globalWhite;
                 }
                 @include tabletQuery{
                     width: 11.5625rem;
@@ -85,6 +88,7 @@ body {
                     position: absolute;
                     top: 2rem;
                     left: 31.5rem;
+                    color: $globalWhite;
                 }
             }
         }
@@ -93,7 +97,7 @@ body {
 .warehouse {
     @include mobileQuery{
         display: flex;
-        border-top: 2px black;
+        outline-offset: 2px black;
         align-items: flex-start; 
         padding-left: 1.5rem;
         padding-top: 1.5rem;
@@ -101,11 +105,13 @@ body {
         word-wrap: break-word;
         overflow-wrap: break-word;
         text-align: left;
+        z-index: 1;
+        border-bottom: 1px $outlinesBorders solid;
     }
     @include tabletQuery{
         display: flex;
         text-align: left;
-        border-top: 2px black;
+        border-bottom: 1px $outlinesBorders solid;
     }
 
     &__header {
@@ -184,7 +190,6 @@ body {
         @include mobileQuery{
             width: 0.875rem;
             height: 1.125rem;
-            padding-left: 0.3125rem;
         }
         @include tabletQuery{
             display: none;
@@ -297,6 +302,12 @@ body {
     @include tabletQuery{
         position: absolute;
         top: 52rem;
+    }
+}
+
+.action{
+    @include tabletQuery{
+        padding-left: 9rem;
     }
 }
 

@@ -1,3 +1,3 @@
-import 'EditWarehouse.scss'
+// import 'EditWarehouse.scss'
 
-function 
+// function 

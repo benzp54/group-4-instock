@@ -5,6 +5,7 @@ import deleteIcon from '../../assets/icons/delete_outline-24px.svg';
 import editIcon from '../../assets/icons/edit-24px.svg';
 import './Warehouses.scss';
 import { Link } from 'react-router-dom';
+import { toBeEnabled } from '@testing-library/jest-dom/dist/matchers';
 
 
 const apiUrl = "http://localhost:8080"
@@ -44,7 +45,7 @@ class Warehouses extends React.Component {
                     <p className='warehouse__header--top'>ADDRESS</p>
                     <p className='warehouse__header--top'>CONTACT NAME</p>
                     <p className='warehouse__header--top'>CONTACT INFORMATION</p>
-                    <p className='warehouse__header--top'>ACTIONS</p>
+                    <p className='warehouse__header--top action'>ACTIONS</p>
                 </div>
                 <div className='warehosue__container'>
                     {this.state.warehouseList.map((warehouseNames)=>{
@@ -57,7 +58,9 @@ class Warehouses extends React.Component {
                                     </Link>
                                     <h2 className='warehouse__title'>ADDRESS</h2>
                                     <p className='warehouse__text'>{warehouseNames.address}, {warehouseNames.city}, {warehouseNames.country}</p>
-                                    <img className='warehouse__image' src={deleteIcon}></img>
+                                    <Link to={`/warehouses/delete-warehouse`}>
+                                        <img className='warehouse__image' src={deleteIcon}></img>
+                                    </Link>
                                 </div>
                                 <div className='warehouse__right'>
                                     <h2 className='warehouse__title'>CONTACT NAME</h2>
@@ -65,8 +68,12 @@ class Warehouses extends React.Component {
                                     <h2 className='warehouse__title'>CONTACT INFORMATION</h2>
                                     <p className='warehouse__text'>{warehouseNames.contact.phone}</p>
                                     <p className='warehouse__text'>{warehouseNames.contact.email}</p>
-                                    <img className='warehouse__image--delete' src={deleteIcon}></img>
-                                    <img className='warehouse__image--edit' src={editIcon}></img>
+                                    <Link to={`/warehouses/delete-warehouse`}>
+                                        <img className='warehouse__image--delete' src={deleteIcon}></img>
+                                    </Link>
+                                    <Link to={`/warehouses/edit-warehouse`}>
+                                        <img className='warehouse__image--edit' src={editIcon}></img>
+                                    </Link>
                                 </div>
                             </div>
                         )
@@ -78,6 +85,5 @@ class Warehouses extends React.Component {
     }
     
 };
-
 
 export default Warehouses;
