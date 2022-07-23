@@ -59,7 +59,9 @@ class Warehouses extends React.Component {
                                     </Link>
                                     <h2 className='warehouse__title'>ADDRESS</h2>
                                     <p className='warehouse__text'>{warehouseNames.address}, {warehouseNames.city}, {warehouseNames.country}</p>
-                                    <img className='warehouse__image' src={deleteIcon}></img>
+                                    <Link to={`/warehouses/delete-warehouse`}>
+                                        <img className='warehouse__image' src={deleteIcon}></img>
+                                    </Link>
                                 </div>
                                 <div className='warehouse__right'>
                                     <h2 className='warehouse__title'>CONTACT NAME</h2>
