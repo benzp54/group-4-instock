@@ -14,7 +14,7 @@ function EditWarehouse() {
             {/* Form Section*/}
             <div className="editWarehouse__content">
                 <h3 className="editWarehouse__formTitle"></h3>
-                <form id="editWarehouseForm">
+                <form id="formEditWarehouse" className="editWarehouseForm">
                     <div className="editWarehouseForm__partOne">
                         <h3>Warehouse Details</h3>
                         <label for="warehouseName">Warehouse Name</label>
