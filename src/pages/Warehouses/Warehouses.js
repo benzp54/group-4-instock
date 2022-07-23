@@ -5,6 +5,9 @@ import deleteIcon from '../../assets/icons/delete_outline-24px.svg';
 import editIcon from '../../assets/icons/edit-24px.svg';
 import './Warehouses.scss';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import axios from 'axios';
+// import EditWarehouse from '../../components/EditWarehouse/EditWarehouse'
 
 
 const apiUrl = "http://localhost:8080"

@@ -1,7 +1,7 @@
-import './EditWarehouse.scss'
-import arrowBack from '../../assets/icons/arrow_back-24px.svg'
+import './EditWarehouse.scss';
+import arrowBack from '../../assets/icons/arrow_back-24px.svg';
 
-function EditWarehouse() {
+function EditWarehouse(props) {
 
     return (
         <section className="editWarehouse">
@@ -20,25 +20,25 @@ function EditWarehouse() {
                         <label for="warehouseName">Warehouse Name</label>
                             <input type="text" name="warehouseName" className="editWarehouseForm__input" 
                             id="warehouseName"
-                            placeholder="Warehouse Name"
+                            placeholder={props.activeWarehouse.name}
                             required>
                             </input>
                         <label for="streetAddress">Street Address</label>
                             <input type="text" name="streetAddress" className="editWarehouseForm__input" 
                             id="streetAddress"
-                            placeholder="Street Address"
+                            placeholder={props.activeWarehouse.address}
                             required>
                             </input>
                         <label for="city">City</label>
                             <input type="text" name="city" className="editWarehouseForm__input" 
                             id="city"
-                            placeholder="City"
+                            placeholder={props.activeWarehouse.city}
                             required>
                             </input>
                         <label for="country">Country</label>
                             <input type="text" name="country" className="editWarehouseForm__input" 
                             id="country"
-                            placeholder="Country"
+                            placeholder={props.activeWarehouse.country}
                             required>
                             </input>
                     </div>
@@ -47,32 +47,32 @@ function EditWarehouse() {
                         <label for="contactName">Contact Name</label>
                             <input type="text" name="contactName" className="editWarehouseForm__input" 
                             id="contactName" 
-                            placeholder="Contact Name"
+                            placeholder={props.activeWarehouse.contact.name}
                             required>
                             </input>
                         <label for="position">Position</label>
                             <input type="text" name="position" className="editWarehouseForm__input" 
                             id="position" 
-                            placeholder="Position"
+                            placeholder={props.activeWarehouse.contact.position}
                             required>
                             </input>
                         <label for="phoneNumber">Phone Number</label>
                             <input type="tel" name="phoneNumber" className="editWarehouseForm__input" 
                             id="phoneNumber" 
-                            placeholder="Phone Number"
+                            placeholder={props.activeWarehouse.contact.phone}
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                             required>
                             </input>
                         <label for="email">Email</label>
                             <input type="email" name="email" className="editWarehouseForm__input" 
                             id="email" 
-                            placeholder="Email"
+                            placeholder={props.activeWarehouse.contact.email}
                             required>
                             </input>
                     </div>
                     <div className="editWarehouseForm__footer">
-                        <button className="btn__cancel">Cancel</button>
-                        <button className="btn__save">Save</button>
+                        <button className="btn btn__cancel">Cancel</button>
+                        <input type="submit" value="Save" className="btn btn__save"></input>
                     </div>
                 </form>
             </div>

@@ -17,18 +17,6 @@ input {
     padding: 0 16px;
 }
 
-button {
-    border-radius: 20px;
-    border: 2px solid $outlinesBorders;
-    line-height: 36px;
-    width: 48%;
-
-    @include tabletQuery {
-        width: 10%;
-        margin: 0 1%;
-    }
-}
-
 //Class styling
 .editWarehouse {
     display: flex;
@@ -115,6 +103,16 @@ button {
 }
 
 .btn {
+    border-radius: 20px;
+    border: 2px solid $outlinesBorders;
+    line-height: 36px;
+    height: 100%;
+    width: 48%;
+
+    @include tabletQuery {
+        width: 10%;
+        margin: 0 1%;
+    }
 
     &__cancel {
     background-color: $globalWhite;
@@ -127,3 +125,8 @@ button {
     }
 }
 
+//Placeholder styling:
+::placeholder {
+    color: $globalText;
+    // opacity: 1;
+}
