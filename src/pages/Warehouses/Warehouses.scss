@@ -1,6 +1,6 @@
-@import '../../styles/partials/fonts';
-@import '../../styles/partials/mixins';
-@import '../../styles/partials/variables';
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
 body {
     font-family: "Titillium Web";
@@ -13,10 +13,16 @@ body {
             @include mobileQuery {
                 color: #13182C;
                 font-weight: 600;
-                font-size: 28px;
+                font-size: 1.75rem;
                 position: absolute;
-                left: 24px;
-                top: 32px;
+                left: 1.5rem;
+                top: 2rem;
+                margin: 0;
+            }
+            @include tabletQuery{
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
                 margin: 0;
             }
         }
@@ -36,32 +42,50 @@ body {
             &--input {
                 @include mobileQuery {
                     position: absolute;
-                    left: 24px;
-                    top: 84px;
-                    width: 295px;
-                    height: 36px;
+                    left: 1.5rem;
+                    top: 5.25rem;
+                    width: 18.4375rem;
+                    height: 2.25rem;
                     border: 1px solid #BDC5D5;
                     border-radius: 20px;
                     align-items: center;
                     padding: 0;
                 }
+                @include tabletQuery{
+                    width: 11.5625rem;
+                    height: 1.9rem;
+                    border-radius: 20px;
+                    position: absolute;
+                    top: 2rem;
+                    left: 18.9375rem;
+                }
             }
             
             &--button {
                 @include mobileQuery{
-                    font-size: 13px;
+                    font-size: 0.8125rem;
                     padding: 0;
                     display: flex;
                     align-items: center;
-                    padding: 8px 84px;
+                    padding: 0.5rem 5.25rem;
                     position: absolute;
-                    width: 295px;
-                    height: 36px;
-                    left: 24px;
-                    top: 136px;
+                    width: 18.4375rem;
+                    height: 2.25rem;
+                    left: 1.5rem;
+                    top: 8.5rem;
                     background: $interactiveElements;
                     border-radius: 20px;
                     border-color: $interactiveElements;
+                }
+                @include tabletQuery{
+                    width: 11.5625rem;
+                    height: 2.375rem;
+                    border-radius: 20px;
+                    background: $interactiveElements;
+                    border-color: $interactiveElements;
+                    position: absolute;
+                    top: 2rem;
+                    left: 31.5rem;
                 }
             }
         }
@@ -70,14 +94,39 @@ body {
 .warehouse {
     @include mobileQuery{
         display: flex;
-        border-top: 1px $outlinesBorders;
+        border-top: 2px black;
         align-items: flex-start; 
-        padding-left: 24px;
-        padding-top: 24px;
-        padding-right: 47px;
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+        padding-right: 2.9375rem;
         word-wrap: break-word;
         overflow-wrap: break-word;
         text-align: left;
+    }
+    @include tabletQuery{
+        display: flex;
+        text-align: left;
+    }
+
+    &__header {
+        @include mobileQuery{
+            display: none;
+        }
+        @include tabletQuery{
+            display: flex;
+            position: absolute;
+            top: 5.875rem;
+            left: 32px;
+            font-size: 0.875rem;
+        }
+
+        &--top{
+            @include tabletQuery{
+                margin: 0;
+                width: 8.0625rem;
+                text-align: left;
+            }
+        }
     }
 
     &__container{
@@ -88,43 +137,79 @@ body {
 
     &__left {
         @include mobileQuery{
-            width: 140px;
+            width: 8.75rem;
+        }
+        @include tabletQuery{
+            display: flex;
+        }
+    }
+
+    &__right {
+        @include tabletQuery{
+            display: flex;
         }
     }
 
     &__title {
         @include mobileQuery{
-            font-size: 11px;
+            font-size: 0.6875rem;
             font-weight: 600;
             color: $headersPlaceholdersText;
             margin: 0;
             align-items: left; 
         }
+        @include tabletQuery{
+            display: none;
+        }
     }
 
     &__text {
         @include mobileQuery{
-            font-size: 13px;
+            font-size: 0.8125rem;
             font-weight: 400;
             color: $globalText;
-            padding-top: 4px;
+            padding-top: 0.25rem;
             margin: 0;
+        }
+        @include tabletQuery{
+            width: 8rem;
+            font-size: 0.8125rem;
         }
     }
 
     &__image {
         @include mobileQuery{
-            width: 14px;
-            height: 18px;
-            padding-left: 5px;
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-left: 0.3125rem;
+        }
+        @include tabletQuery{
+            display: none;
         }
     }
 
     &__image--edit {
         @include mobileQuery{
-            width: 14px;
-            height: 18px;
-            // padding-left: 298px;
+            width: 0.875rem;
+            height: 1.125rem;
+        }
+        @include tabletQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+    }
+
+    &__image--delete {
+        @include mobileQuery{
+            display: none;
+        }
+        @include tabletQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-top: 1rem;
+            padding-left: 1.5rem;
         }
     }
     
@@ -133,49 +218,82 @@ body {
 .warehouse:nth-of-type(n) {
     @include mobileQuery{
         position: absolute;
-        top: 196px;
+        top: 12.25rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 10.0625rem;
+        left: 2rem;
     }
 }
 .warehouse:nth-of-type(2n) {
     @include mobileQuery{
         position: absolute;
-        top: 393px;
+        top: 24.5625rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 15.5625rem;
     }
 }
 .warehouse:nth-of-type(3n) {
     @include mobileQuery{
         position: absolute;
-        top: 590px;
+        top: 36.875rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 21.75rem;
     }
 }
 .warehouse:nth-of-type(4n) {
     @include mobileQuery{
         position: absolute;
-        top: 787px;
+        top: 49.1875rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 27.9375rem;
     }
 }
 .warehouse:nth-of-type(5n) {
     @include mobileQuery{
         position: absolute;
-        top: 984px;
+        top: 61.5rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 34.125rem;
     }
 }
 .warehouse:nth-of-type(6n) {
     @include mobileQuery{
         position: absolute;
-        top: 1181px;
+        top: 73.8125rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 40.3125rem;
     }
 }
 .warehouse:nth-of-type(7n) {
     @include mobileQuery{
         position: absolute;
-        top: 1378px;
+        top: 86.125rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 46.5rem;
     }
 }
 .warehouse:nth-of-type(8n) {
     @include mobileQuery{
         position: absolute;
-        top: 1575px;
+        top: 98.4375rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 52rem;
     }
 }
 

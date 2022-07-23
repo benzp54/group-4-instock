@@ -39,6 +39,13 @@ class Warehouses extends React.Component {
                         <button className='warehouses__form--button'>+ Add New Warehouse</button>
                     </form>
                 </div>
+                <div className='warehouse__header'>
+                    <p className='warehouse__header--top'>WAREHOUSE</p>
+                    <p className='warehouse__header--top'>ADDRESS</p>
+                    <p className='warehouse__header--top'>CONTACT NAME</p>
+                    <p className='warehouse__header--top'>CONTACT INFORMATION</p>
+                    <p className='warehouse__header--top'>ACTIONS</p>
+                </div>
                 <div className='warehosue__container'>
                     {this.state.warehouseList.map((warehouseNames)=>{
                         return(
@@ -58,6 +65,7 @@ class Warehouses extends React.Component {
                                     <h2 className='warehouse__title'>CONTACT INFORMATION</h2>
                                     <p className='warehouse__text'>{warehouseNames.contact.phone}</p>
                                     <p className='warehouse__text'>{warehouseNames.contact.email}</p>
+                                    <img className='warehouse__image--delete' src={deleteIcon}></img>
                                     <img className='warehouse__image--edit' src={editIcon}></img>
                                 </div>
                             </div>
