@@ -67,8 +67,12 @@ class Warehouses extends React.Component {
                                     <h2 className='warehouse__title'>CONTACT INFORMATION</h2>
                                     <p className='warehouse__text'>{warehouseNames.contact.phone}</p>
                                     <p className='warehouse__text'>{warehouseNames.contact.email}</p>
-                                    <img className='warehouse__image--delete' src={deleteIcon}></img>
-                                    <img className='warehouse__image--edit' src={editIcon}></img>
+                                    <Link to={`/warehouses/delete-warehouse`}>
+                                        <img className='warehouse__image--delete' src={deleteIcon}></img>
+                                    </Link>
+                                    <Link to={`/warehouses/edit-warehouse`}>
+                                        <img className='warehouse__image--edit' src={editIcon}></img>
+                                    </Link>
                                 </div>
                             </div>
                         )

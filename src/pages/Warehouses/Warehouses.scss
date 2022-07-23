@@ -70,7 +70,7 @@ body {
                     border-radius: 20px;
                     position: absolute;
                     top: 2rem;
-                    left: 18.9375rem;
+                    left: 21.9375rem;
                 }
                 @include desktopQuery{
                     width: 11.5625rem;
@@ -78,7 +78,7 @@ body {
                     border-radius: 20px;
                     position: absolute;
                     top: 2rem;
-                    left: 32.625rem;
+                    left: 46.625rem;
                 }
             }
             
@@ -98,6 +98,7 @@ body {
                     border-radius: 20px;
                     border-color: $interactiveElements;
                     color: $pageBG;
+                    padding: 0 4.5rem;
                 }
                 @include tabletQuery{
                     width: 11.5625rem;
@@ -107,8 +108,9 @@ body {
                     border-color: $interactiveElements;
                     position: absolute;
                     top: 2rem;
-                    left: 31.5rem;
+                    left: 35.5rem;
                     color: $pageBG;
+                    padding: 0;
                 }
                 @include desktopQuery{
                     width: 11.5625rem;
@@ -118,8 +120,9 @@ body {
                     border-color: $interactiveElements;
                     position: absolute;
                     top: 2rem;
-                    left: 50.75rem;
+                    left: 60.75rem;
                     color: $pageBG;
+                    padding: 0;
                 }
             }
         }
