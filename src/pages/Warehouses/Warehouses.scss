@@ -23,7 +23,6 @@ body {
                 position: absolute;
                 top: 2rem;
                 left: 2rem;
-                margin: 0;
             }
         }
         &__container {
@@ -106,6 +105,7 @@ body {
     @include tabletQuery{
         display: flex;
         text-align: left;
+        border-top: 2px black;
     }
 
     &__header {
@@ -117,7 +117,9 @@ body {
             position: absolute;
             top: 5.875rem;
             left: 32px;
-            font-size: 0.875rem;
+            font-size: 0.75rem;
+            background-color: $pageBG;
+            color: $headersPlaceholdersText;
         }
 
         &--top{
@@ -156,7 +158,8 @@ body {
             font-weight: 600;
             color: $headersPlaceholdersText;
             margin: 0;
-            align-items: left; 
+            align-items: left;
+            padding-top: 1.5rem; 
         }
         @include tabletQuery{
             display: none;
