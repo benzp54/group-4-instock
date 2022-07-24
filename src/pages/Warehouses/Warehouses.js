@@ -5,7 +5,7 @@ import deleteIcon from '../../assets/icons/delete_outline-24px.svg';
 import editIcon from '../../assets/icons/edit-24px.svg';
 import './Warehouses.scss';
 import { Link } from 'react-router-dom';
-// import EditWarehouse from '../../components/EditWarehouse/EditWarehouse'
+import EditWarehouse from '../../components/EditWarehouse/EditWarehouse';
 
 
 const apiUrl = "http://localhost:8080"
@@ -15,7 +15,8 @@ class Warehouses extends React.Component {
         super()
         this.state = {
             warehouseList: [],
-            warehouseId: '',
+            warehouseId: null,
+            selectEditWarehouse: null
         }
     }
     componentDidMount() {
@@ -30,8 +31,20 @@ class Warehouses extends React.Component {
         });
     }
 
+    componentDidUpdate() {
+        const activeWarehouse = this.props.match.path.id;
+
+        if (activeWarehouse !== undefined) {
+            this.state.selectEditWarehouse = activeWarehouse
+        } else {
+            console.log("componentDidUpdate");
+        }
+    }
+
     render() {
         return (
+            <>
+            {this.state.warehouseList !== null && this.state.selectEditWarehouse == null ?
             <div className='warehouses'>
                 <div className='warehouses__container'>
                     <h1 className='warehouses__title'>Warehouses</h1>
@@ -73,19 +86,23 @@ class Warehouses extends React.Component {
                                     <Link to={`/warehouses/delete-warehouse`}>
                                         <img className='warehouse__image--delete' src={deleteIcon}></img>
                                     </Link>
-                                    <Link to={`/warehouses/edit-warehouse`}>
+                                    <Link to={`/warehouses/edit-warehouse/${warehouseNames.id}`}>
                                         <img className='warehouse__image--edit' src={editIcon}></img>
                                     </Link>
                                 </div>
                             </div>
-                        )
-                    })
-                    }
+                        )}
+                    )}
                 </div>
-            </div>
+            </div> 
+            : this.state.selectEditWarehouse !== null ?
+                <EditWarehouse activeWarehouse = {this.state.warehouseList}/>
+            :
+            null
+            }
+            </>
         )
-    }
-    
+    };
 };
 
 
