@@ -19,7 +19,7 @@ class App extends React.Component {
             <Route path="/" exact component={Warehouse} />
 
             <Route path="/warehouse" component={Warehouse} />
-            <Route path="/warehouse/:id" component={Warehouse} />
+            <Route path="/warehouse/:id" exact component={WarehouseDetails} />
             <Route path="/warehouse/add-new-warehouse" component={Warehouse} />
             <Route path="/warehouse/edit-warehouse" component={Warehouse} />
             <Route path="/inventory" component={Inventory} />
