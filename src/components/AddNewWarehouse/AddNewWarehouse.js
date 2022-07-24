@@ -50,7 +50,7 @@ class AddNewWarehouse extends React.Component {
     handleInputChange(e) {
         const value = e.target.value;
         const name = e.target.name;
-        
+   
         this.setState({
             [name] : value
         });
@@ -133,7 +133,7 @@ class AddNewWarehouse extends React.Component {
                         </div>
                         <div className="addWarehouseForm__footer">
                             <button className="btn__cancel">Cancel</button>
-                            <button className="btn__save" onClick={this.addNewWarehouse} type= "submit" id="addWarehouse">+ Add Warehouse</button>
+                            <input value= "+ Add Warehouse" className="btn__save" onClick={this.addNewWarehouse} type= "submit" id="addWarehouse"></input>
                         </div>
                     </form>
                 </div>
