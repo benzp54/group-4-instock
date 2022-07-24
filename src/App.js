@@ -7,6 +7,7 @@ import { Switch } from "react-router-dom";
 import Warehouse from "./pages/Warehouses/Warehouses";
 // import Inventory from "./pages/Inventory/Inventory";
 // import Footer from "./components/Footer/Footer";
+import WarehouseDetails from "./components/WarehouseDetails/WarehouseDetails";
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
           <Switch>
             <Route path="/" exact component={Warehouse} />
             <Route path="/warehouse" exact component={Warehouse} />
+            <Route path="/warehouse/:id" exact component={WarehouseDetails} />
             <Route path="/warehouse/add-new-warehouse" component={Warehouse} />
             <Route path="/warehouse/edit-warehouse" component={Warehouse} />
             {/* <Route path="/inventory" component={Inventory} />
