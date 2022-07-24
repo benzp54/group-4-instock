@@ -1,3 +1,1 @@
-// import 'EditWarehouse.scss'
-
-// function 
+import 'EditWarehouse.scss'
