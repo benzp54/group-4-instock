@@ -1,11 +1,10 @@
 import React from "react";
 
-export default function InventoryItemDetails(props) {
+function InventoryItemDetails(props) {
   const itemDetails = props.info;
-
   return (
     <section className="inventory-item-detail-wrapper">
-      <h2 className="itemName">{itemDetails.itemName}</h2>
+      <h1 className="itemName">{itemDetails.itemName}</h1>
       <br />
       <p className="itemDescriptionHeading">ITEM DESCRIPTION</p>
       <p className="itemDescription">{itemDetails.description}</p>
@@ -21,3 +20,5 @@ export default function InventoryItemDetails(props) {
     </section>
   );
 }
+
+export default InventoryItemDetails;

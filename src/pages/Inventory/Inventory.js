@@ -1,8 +1,8 @@
 import React from "react";
-import React, { Component } from "react";
-import ReactDOM from "react";
+// import React, { Component } from "react";
+// import ReactDOM from "react";
 import axios from "axios";
-import InventoryItemDetails from "../../components/InventoryItemDetails/InventoryItemDetails";
+// import InventoryItemDetails from "../../components/InventoryItemDetails/InventoryItemDetails";
 import deleteIcon from "../../assets/icons/delete_outline-24px.svg";
 import editIcon from "../../assets/icons/edit-24px.svg";
 
@@ -38,23 +38,23 @@ class Inventory extends React.Component {
           <button>+ Add New Inventory</button>
         </form>
         <div>
-          {this.state.inventory.map((inventoryMain) => {
+          {this.state.inventory.map((inventoryData) => {
             return (
-              <div className="inventory">
+              <div key={inventoryData.id} className="inventory">
                 <div className="inventory_left">
                   <h2 className="item-title">INVENTORY ITEM</h2>
-                  <p className="item">{inventoryMain.itemName}</p>
+                  <p className="item">{inventoryData.item}</p>
                   <h2 className="category-title">CATEGORY</h2>
-                  <p className="category">{inventoryMain.caegory}</p>
+                  <p className="category">{inventoryData.category}</p>
                   <img src={deleteIcon} alt="Delete symbol"></img>
                 </div>
                 <div className="warehouse__right">
                   <h2 className="status-title">STATUS</h2>
-                  <p className="status">{inventoryMain.status}</p>
+                  <p className="status">{inventoryData.status}</p>
                   <h2 className="quantity-title">QTY</h2>
-                  <p quantity>{inventoryMain.quantity}</p>
+                  <p quantity>{inventoryData.quantity}</p>
                   <h2 className="warhouse-title">WAREHOUSE</h2>
-                  <p className="warehouse">{inventoryMain.warehouseName}</p>
+                  <p className="warehouse">{inventoryData.warehouseName}</p>
                   <img src={editIcon} alt="Edit symbol"></img>
                 </div>
               </div>
