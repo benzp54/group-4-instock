@@ -37,7 +37,9 @@ class Warehouses extends React.Component {
                     <h1 className='warehouses__title'>Warehouses</h1>
                     <form className='warehouses__form'>
                         <input className='warehouses__form--input' placeholder='Search'></input>
-                        <button className='warehouses__form--button'>+ Add New Warehouse</button>
+                        <Link to={`/warehouses/add-new-warehouse`}>
+                            <button className='warehouses__form--button'>+ Add New Warehouse</button>
+                        </Link>
                     </form>
                 </div>
                 <div className='warehouse__header'>
