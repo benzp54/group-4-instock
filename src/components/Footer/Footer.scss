@@ -1,5 +1,24 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer-main {
+  @include mobileQuery{
+    position: absolute;
+    top: 110.3125rem;
+    left: 6rem;
+  }
+  @include tabletQuery{
+    position: absolute;
+    top: 57.5rem;
+    left: 18.9375rem;
+  }
+  @include desktopQuery{
+    position: absolute;
+    top: 59.5rem;
+    left: 33.9375rem;
+  }
+}
 
 .footer-text {
   min-width: "157px";
