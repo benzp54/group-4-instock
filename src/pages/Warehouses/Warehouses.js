@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import ReactDOM from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import WarehouseList from "../../components/WarehouseList/WarehouseList"
 import WarehouseDetails from "../../components/WarehouseDetails/WarehouseDetails";
