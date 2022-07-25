@@ -32,6 +32,9 @@ class WarehouseList extends React.Component {
 
   render() {
     return (
+        <>
+        {this.state.warehouseList !== null ?
+            <>
       <div className="warehouses">
         <div className="warehouses__container">
           <h1 className="warehouses__title">Warehouses</h1>
@@ -102,6 +105,10 @@ class WarehouseList extends React.Component {
           })}
         </div>
       </div>
+      </> :
+      null
+        }
+      </>
     );
   }
 }
