@@ -20,7 +20,7 @@ class WarehouseDetails extends React.Component {
 
   componentDidMount() {
     axios
-      .get(`${apiUrl}/warehouses/warehouse/${this.props.match.params.id}`)
+      .get(`${apiUrl}/warehouse/${this.props.match.params.id}`)
       .then((response) => {
         console.log(response.data[0]);
         console.log(response.data[0].contact);

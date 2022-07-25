@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const apiUrl = "http://localhost:8080";
 
-class Warehouses extends React.Component {
+class WarehouseList extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -106,4 +106,4 @@ class Warehouses extends React.Component {
   }
 }
 
-export default Warehouses;
+export default WarehouseList;
