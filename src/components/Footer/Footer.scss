@@ -1,0 +1,15 @@
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer-text {
+  min-width: "157px";
+  height: "16px";
+  display: "block";
+  color: $headersPlaceholdersText;
+  margin-left: "auto";
+  margin-right: "auto";
+  font-size: "12px";
+  line-height: "18px";
+  font-weight: 400;
+  font-family: Titillium Web;
+}
