@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Header from "./components/Header/Header"
 import Warehouses from "./pages/Warehouses/Warehouses";
 import Inventory from "./pages/Inventory/Inventory";
 import Footer from "./components/Footer/Footer"
@@ -10,7 +11,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <BrowserRouter>
-          {/* <Header /> */}
+          <Header />
           <Switch>
             <Route path="/" exact component={Warehouses} />
             <Route path="/warehouse" exact component={Warehouses}/>
