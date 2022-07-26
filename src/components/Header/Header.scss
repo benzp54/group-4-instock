@@ -3,12 +3,15 @@
 @use "../../styles/partials/mixins" as *;
 
 .header{
+    background-color: $navHeaderBG;
+    
     @include mobileQuery{
         width: 23.4375rem;
         height: 12.5rem;
     }
     &__heading{
         display: flex;
+        
         @include mobileQuery{
             justify-content: space-evenly;
         }
@@ -22,5 +25,9 @@
             top: 0.5rem;
             left: 55rem;
         }
+    }
+
+    &__text{
+        color: $globalWhite;
     }
 }

@@ -11,10 +11,10 @@ function Header(){
             <img className='' src={logoOne}></img>
             <div className='header__heading'>
                 <Link to={`/`}>
-                    <div>Warehouses</div>
+                    <div className='header__text'>Warehouses</div>
                 </Link>
                 <Link to={`/inventory`}>
-                    <div>Inventory</div>
+                    <div className='header__text'>Inventory</div>
                 </Link>
             </div>
         </div>
