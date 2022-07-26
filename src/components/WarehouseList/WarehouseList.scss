@@ -1,0 +1,427 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+body {
+    font-family: "Titillium Web";
+}
+
+.warehouses {
+    background: #FFFFFF;
+              
+        &__title {
+            @include mobileQuery {
+                color: #13182C;
+                font-weight: 600;
+                font-size: 1.75rem;
+                position: absolute;
+                left: 1.5rem;
+                top: 3.0rem;
+                margin: 0;
+            }
+            @include tabletQuery{
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+                margin: 0;
+            }
+            @include desktopQuery{
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+                margin: 0;
+            }
+        }
+        &__container {
+            @include tabletQuery{
+                display: flex;
+                flex-direction: row;
+            }
+            @include desktopQuery{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        &__form {
+            @include mobileQuery{
+                display: block;
+            }
+            @include tabletQuery{
+                display: flex;
+            }
+            @include desktopQuery{
+                display: flex;
+            }
+            &--input {
+                @include mobileQuery {
+                    position: absolute;
+                    left: 1.5rem;
+                    top: 5.25rem;
+                    width: 18.4375rem;
+                    height: 2.25rem;
+                    border: 1px solid #BDC5D5;
+                    border-radius: 20px;
+                    align-items: center;
+                    padding: 0;
+                }
+                @include tabletQuery{
+                    width: 11.5625rem;
+                    height: 1.9rem;
+                    border-radius: 20px;
+                    position: absolute;
+                    top: 2rem;
+                    left: 21.9375rem;
+                }
+                @include desktopQuery{
+                    width: 11.5625rem;
+                    height: 1.9rem;
+                    border-radius: 20px;
+                    position: absolute;
+                    top: 2rem;
+                    left: 46.625rem;
+                }
+            }
+            
+            &--button {
+                @include mobileQuery{
+                    font-size: 0.8125rem;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    padding: 0.5rem 5.25rem;
+                    position: absolute;
+                    width: 18.4375rem;
+                    height: 2.25rem;
+                    left: 1.5rem;
+                    top: 8.5rem;
+                    background: $interactiveElements;
+                    border-radius: 20px;
+                    border-color: $interactiveElements;
+                    color: $pageBG;
+                    padding: 0 4.5rem;
+                }
+                @include tabletQuery{
+                    width: 11.5625rem;
+                    height: 2.375rem;
+                    border-radius: 20px;
+                    background: $interactiveElements;
+                    border-color: $interactiveElements;
+                    position: absolute;
+                    top: 2rem;
+                    left: 35.5rem;
+                    color: $pageBG;
+                    padding: 0;
+                }
+                @include desktopQuery{
+                    width: 11.5625rem;
+                    height: 2.375rem;
+                    border-radius: 20px;
+                    background: $interactiveElements;
+                    border-color: $interactiveElements;
+                    position: absolute;
+                    top: 2rem;
+                    left: 60.75rem;
+                    color: $pageBG;
+                    padding: 0;
+                }
+            }
+        }
+}
+
+.warehouse {
+    @include mobileQuery{
+        display: flex;
+        border-top: 2px black;
+        align-items: flex-start; 
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+        padding-right: 2.9375rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-align: left;
+        border-bottom: 1px solid $pageBG;
+    }
+    @include tabletQuery{
+        display: flex;
+        text-align: left;
+        border-bottom: 1px solid $pageBG;
+    }
+    @include desktopQuery{
+        display: flex;
+        text-align: left;
+        border-bottom: 1px solid $pageBG;
+    }
+
+    &__header {
+        @include mobileQuery{
+            display: none;
+        }
+        @include tabletQuery{
+            display: flex;
+            position: absolute;
+            top: 5.875rem;
+            left: 32px;
+            font-size: 0.875rem;
+        }
+        @include desktopQuery{
+            display: flex;
+            position: absolute;
+            top: 5.875rem;
+            left: 32px;
+            font-size: 0.875rem;
+        }
+
+        &--top{
+            @include tabletQuery{
+                margin: 0;
+                width: 8.0625rem;
+                text-align: left;
+            }
+            @include desktopQuery{
+                margin: 0;
+                width: 13rem;
+                text-align: left;
+            }
+        }
+    }
+
+    &__container{
+        @include tabletQuery{
+            display: flex;
+        }
+        @include desktopQuery{
+            display: flex;
+        }
+    }
+
+    &__left {
+        @include mobileQuery{
+            width: 8.75rem;
+        }
+        @include tabletQuery{
+            display: flex;
+        }
+        @include desktopQuery{
+            display: flex;
+        }
+    }
+
+    &__right {
+        @include tabletQuery{
+            display: flex;
+        }
+        @include desktopQuery{
+            display: flex;
+        }
+    }
+
+    &__title {
+        @include mobileQuery{
+            font-size: 0.6875rem;
+            font-weight: 600;
+            color: $headersPlaceholdersText;
+            margin: 0;
+            align-items: left; 
+        }
+        @include tabletQuery{
+            display: none;
+        }
+        @include desktopQuery{
+            display: none;
+        }
+    }
+
+    &__text {
+        @include mobileQuery{
+            font-size: 0.8125rem;
+            font-weight: 400;
+            color: $globalText;
+            padding-top: 0.25rem;
+            margin: 0;
+        }
+        @include tabletQuery{
+            width: 8rem;
+            font-size: 0.8125rem;
+        }
+        @include desktopQuery{
+            width: 13rem;
+            font-size: 0.8125rem;
+        }
+    }
+
+    &__image {
+        @include mobileQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-left: 0.3125rem;
+        }
+        @include tabletQuery{
+            display: none;
+        }
+        @include desktopQuery{
+            display: none;
+        }
+    }
+
+    &__image--edit {
+        @include mobileQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+        }
+        @include tabletQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+        @include desktopQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+    }
+
+    &__image--delete {
+        @include mobileQuery{
+            display: none;
+        }
+        @include tabletQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-top: 1rem;
+            padding-left: 1.5rem;
+        }
+        @include desktopQuery{
+            width: 0.875rem;
+            height: 1.125rem;
+            padding-top: 1rem;
+            padding-left: 1.5rem;
+        }
+    }
+    
+}
+
+.warehouse:nth-of-type(n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 12.25rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 10.0625rem;
+        left: 2rem;
+    }
+    @include desktopQuery{
+        position: absolute;
+        top: 10.0625rem;
+        left: 2rem;
+    }
+}
+.warehouse:nth-of-type(2n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 24.5625rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 15.5625rem;
+    }
+    @include desktopQuery{
+        position: absolute;
+        top: 15.5625rem;
+    }
+}
+.warehouse:nth-of-type(3n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 36.875rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 21.75rem;
+    }
+    @include desktopQuery{
+        position: absolute;
+        top: 21.75rem;
+    }
+}
+.warehouse:nth-of-type(4n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 49.1875rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 27.9375rem;
+    }
+    @include desktopQuery{
+        position: absolute;
+        top: 27.9375rem;
+    }
+}
+.warehouse:nth-of-type(5n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 61.5rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 34.125rem;
+    }
+    @include desktopQuery{
+        position: absolute;
+        top: 34.125rem;
+    }
+}
+.warehouse:nth-of-type(6n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 73.8125rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 40.3125rem;
+    }
+    @include desktopQuery{
+        position: absolute;
+        top: 40.3125rem;
+    }
+}
+.warehouse:nth-of-type(7n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 86.125rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 46.5rem;
+    }
+    @include desktopQuery{
+        position: absolute;
+        top: 46.5rem;
+    }
+}
+.warehouse:nth-of-type(8n) {
+    @include mobileQuery{
+        position: absolute;
+        top: 98.4375rem;
+    }
+    @include tabletQuery{
+        position: absolute;
+        top: 52rem;
+    }
+    @include desktopQuery{
+        position: absolute;
+        top: 52rem;
+    }
+}
+
+.action{
+    @include tabletQuery{
+        padding-left: 9rem;
+    }
+    @include desktopQuery{
+        padding-left: 14rem;
+    }
+}
