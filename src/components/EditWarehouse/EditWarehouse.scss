@@ -1,0 +1,132 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+//Element styling
+label {
+    display: block;
+    padding-bottom: 4px;
+}
+
+input {
+    border-radius: 20px;
+    border: 2px solid $outlinesBorders;
+    box-sizing: border-box;
+    height: 36px;
+    width: 100%;
+    margin-bottom: 2%;
+    padding: 0 16px;
+}
+
+//Class styling
+.editWarehouse {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    box-sizing: border-box;
+    color: #13182C;
+    text-align: left;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+    border-radius: 3px;
+    width: 100vw;
+    padding: 0 4%;
+
+    &__heading {
+        box-sizing: border-box;
+        border-bottom: 2px solid $outlinesBorders;
+        width: 100%;
+        padding: 4%
+    }
+
+    &__title {
+        display: inline;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        margin: 0;
+        padding: 2%;
+    }
+
+    &__content {
+        padding: 0 4%;
+    }
+
+    &__formTitle {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+.editWarehouseForm {
+
+    @include tabletQuery {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    &__partOne {
+        border-bottom: 2px solid $outlinesBorders;
+
+        @include tabletQuery {
+            box-sizing: border-box;
+            width: 50%;
+            padding-right: 5%;
+            border-bottom: none;
+            border-right: 2px solid $outlinesBorders
+        }
+    }
+
+    &__partTwo {
+
+        @include tabletQuery {
+            box-sizing: border-box;
+            width: 50%;
+            padding-left: 5%;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 4% 0;
+
+        @include tabletQuery {
+            justify-content: flex-end;
+            width: 100%;
+        }
+    }
+}
+
+.btn {
+    border-radius: 20px;
+    border: 2px solid $outlinesBorders;
+    line-height: 36px;
+    height: 100%;
+    width: 48%;
+
+    @include tabletQuery {
+        width: 10%;
+        margin: 0 1%;
+    }
+
+    &__cancel {
+    background-color: $globalWhite;
+    };
+
+    &__save {
+        color: #FFFFFF;
+        background-color: $interactiveElements;
+        border: none;
+    }
+}
+
+//Placeholder styling:
+::placeholder {
+    color: $globalText;
+    // opacity: 1;
+}
