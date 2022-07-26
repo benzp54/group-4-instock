@@ -9,5 +9,18 @@
     }
     &__heading{
         display: flex;
+        @include mobileQuery{
+            justify-content: space-evenly;
+        }
+        @include tabletQuery{
+            position: absolute;
+            top: 0.5rem;
+            left: 35rem;
+        }
+        @include desktopQuery{
+            position: absolute;
+            top: 0.5rem;
+            left: 55rem;
+        }
     }
 }
